@@ -1,35 +1,41 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import {AiOutlinePlus} from 'react-icons/ai'
 
  const Navbar = () => {
+  const [nav, setNav] = useState(false)
+
+    const handleClick = () => setNav(!nav)
+
+    const handleClose =()=> setNav(!nav)
+
   return (
-    <Nav>
-        <NavLink to='/'>Mishean</NavLink>
-        <NavLink to='/work'>Work</NavLink>
-        <NavLink to='/subscribe'>Subscribe</NavLink>
-    </Nav>
-  )
+    <div className='w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg'>
+      <div className='px-2 flex justify-between items-center w-full h-full'>
+        <div className='flex items-center'>
+          <Link to='/' className='w-full text-3xl font-bold sm:text-4xl'>Mishean</Link>
+          <ul className='hidden md:flex'>
+          <li><Link to='/work' smooth={true} duration={500}>Work</Link></li>
+          <li><Link to='/subscribe' smooth={true} offset={-200} duration={500}>Subscribe</Link></li>
+          </ul>
+        </div>
+        <div className='md:hidden mr-4' onClick={handleClick}>
+            {!nav ? <AiOutlinePlus className='w-5' /> : <AiOutlinePlus className='w-5' />}
+          
+        </div>
+      </div>
+
+      <ul className={!nav ? 'hidden' : 'absolute bg-zinc-200 w-full px-8'}>
+          <li className='border-b-2 border-zinc-300 w-full'><Link onClick={handleClose} to='/work' smooth={true} duration={500}>Home</Link></li>
+          <li className='border-b-2 border-zinc-300 w-full'><Link onClick={handleClose} to='/subscribe' smooth={true} offset={-200} duration={500}>About</Link></li>
+      </ul>
+    </div>
+  );
 }
-const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 4rem; 
-  z-index: 10;
-  width: 100%;
-`;
-
-const NavLink = styled(Link) `
-    color: #000;
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    height : 100%;
-    text-decoration: none;
-`
-
 
 
 
 export default Navbar
+
+

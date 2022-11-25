@@ -33,7 +33,7 @@ const IndexPage = ({data}) => {
           Tools 
         </h2>
         <p>
-          Gatsby / Contentful / Node.js / Jest / Enzyme / Google Analytics / GitHub / Figma / Adobe Illustrator / Adobe Photoshop / Adobe Premire Pro
+          Gatsby / Contentful / Node.js / Jest / Enzyme / Google Analytics / GitHub / Figma / Google Survey / MailChimp / Adobe Illustrator / Adobe Photoshop / Adobe Premire Pro
         </p>
         <h2>Work</h2>
             <section>

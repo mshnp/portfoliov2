@@ -7,7 +7,7 @@ const WorkTemplate
  = ({data}) => {
   const {year, description: {description}, projectTitle, projectImage, summary, url} = data.contentfulWork;
 
-  console.log(projectImage)
+  console.log({data})
   return (
   
   <>
