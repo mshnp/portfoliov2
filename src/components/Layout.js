@@ -1,25 +1,21 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import styled from 'styled-components'
 import 'normalize.css'
+import Header from './Header'
 
 const 
  Layout = ({children}) => {
   return (
-    <Wrapper>
-        <Navbar/>
+    <>
+    <body className='text-transform: uppercase'>
+        <Header/>
         {children}
         <Footer/>
-    </Wrapper>
+    </body>    
+    </>
   )
 }
 
 export default Layout
 
-const Wrapper = styled.section`
-background: yellow;
-margin: 0;
-padding: 0;
-text-transform: uppercase;
-`;
