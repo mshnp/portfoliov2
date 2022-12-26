@@ -21,12 +21,12 @@ module.exports = {
     resolve: `gatsby-source-contentful`,
     options: {
       spaceId: `7ye7xk0ybk6d`, 
-      accessToken: process.env.CONTENTFUL_KEY,
+      accessToken: process.env.CONTENTFUL_API_KEY,
     },},
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-          endpoint: action= process.env.MAILCHIMP_END_POINT, 
+          endpoint: action= process.env.MAILCHIMP_ENDPOINT, 
           timeout: 3500, 
       }},
     {
