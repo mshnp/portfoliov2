@@ -36,7 +36,7 @@ module.exports = {
         short_name: `MISH`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#FFFF00`,
+        theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/images/favicon.png`,
         cache_busting_mode: 'none',
