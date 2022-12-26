@@ -15,9 +15,9 @@ const Timer = () => {
 
 
   return (
-    <>
+    <p className='font-mono'>
     {time.toLocaleTimeString('en-CA', {hour12: false, timeZone: 'America/Toronto', timeZoneName: 'short'})}
-    </>
+    </p>
   );
 }
 

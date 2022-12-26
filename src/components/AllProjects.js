@@ -10,10 +10,8 @@ const AllProjects = () => {
       allContentfulWork {
         nodes {
           id
-          description {
-            description
-          }
           projectImage {
+            description
             gatsbyImageData(placeholder: DOMINANT_COLOR, layout: FIXED, width: 300)
           }
           projectTitle

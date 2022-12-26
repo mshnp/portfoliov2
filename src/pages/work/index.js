@@ -3,39 +3,38 @@ import Layout from '../../components/Layout'
 import { graphql, Link } from 'gatsby'
 import slugify from 'react-slugify'
 import { GatsbyImage } from 'gatsby-plugin-image'
-
+import { SEO } from '../../components/SEO'
 
 const Work = ({data: {allContentfulWork: {nodes}}}) => {
 
+  
     
   return (
    
     <>
     <Layout>
-      <main>
-        <section>
+      <main className='flex flex-col items-center justify-center min-h-[calc(100vh-168px)]'>
+        <section >
           <article>
             {nodes.map((node) => {
-              const {id, projectTitle, summary } = node;
+              const {id, projectTitle, projectImage:[{gatsbyImageData}], projectImage:[{description}],summary } = node;
               const slug = slugify(projectTitle, {lower:true})
                 return (
                   <div>
-                   
-           
-                {  node.projectImage.map((image) => {
-                   const {gatsbyImageData} = image;
-                   return (   
-                     <GatsbyImage image={gatsbyImageData}/>
-              )
-               }) }
+                    <div className='pb-2.5'> 
+                     <GatsbyImage image={gatsbyImageData} alt={description} title={description}/>
+                    </div>
+            
               <Link key={id} to={`/work/${slug}`}>
-               <h3>
+               <p className='underline pb-2.5 text-center'>
               {projectTitle}
-            </h3>
-              <p>
+              
+            </p>
+            </Link> 
+              <p className='pb-5 text-center'>
               {summary}
             </p>
-             </Link> </div>
+             </div>
                )
                 }
                )
@@ -45,15 +44,15 @@ const Work = ({data: {allContentfulWork: {nodes}}}) => {
           
              
         </section>
-        <section>
-          <p>sign up for my weekly newsletter</p>
-        </section>
       </main>
     </Layout>
     </>
   )
 }
 
+export const Head = () => (
+  <SEO title="MISHEAN | WORK"/>
+)
 
 
 export const query = graphql`
@@ -61,11 +60,9 @@ export const query = graphql`
       allContentfulWork {
         nodes {
           id
-          description {
-            description
-          }
           summary 
           projectImage {
+            description
             gatsbyImageData(placeholder: DOMINANT_COLOR, layout: FIXED, width: 300)
           }
           projectTitle

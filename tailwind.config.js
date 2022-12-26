@@ -6,7 +6,10 @@ module.exports = {
     "./src/components/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': ["'JHA Times Now'", 'Helvetica', 'Arial', 'sans-serif'],
+    }
   },
   plugins: [],
 };
+

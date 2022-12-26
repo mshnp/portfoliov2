@@ -8,16 +8,19 @@ const Projects = ({ projects = [] }) => {
     <div>
         <div>
       {projects.map(project => {
-            const {id, projectImage:[{gatsbyImageData}], projectTitle} = project;
+            const {id, projectImage:[{gatsbyImageData}], projectTitle, projectImage:[{description}]} = project;
             const slug = slugify(projectTitle, {lower:true})
             return (
+            <section>
                 <Link key={id} to={`/work/${slug}`}>
             <GatsbyImage
               image={gatsbyImageData}
-              alt={projectTitle}
+              alt={description}
+              title={description}
             />
-            <h5>{projectTitle}</h5>
+            <p className='text-center py-2.5 underline'>{projectTitle}</p>
           </Link>
+          </section>
             )
         })}
 
