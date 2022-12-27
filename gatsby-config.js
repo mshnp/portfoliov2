@@ -38,16 +38,16 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
-        icon: `favicon.png`,
+        icon: `src/images/favicon.png`,
         cache_busting_mode: 'none'
       }
     },
     {
    resolve: 'gatsby-plugin-offline',
    options: {
-    precachePages: [`/work/*`, `/subscribe`, '/work/'],
+    precachePages: [`/work/*`, `/subscribe`, '/work', '/'],
       workboxConfig: {
-         globPatterns: ['*.html', 'src/**/*.png'] 
+         globPatterns: ['*.html', '**/icon-path*'] 
       }
    }
 },
