@@ -47,7 +47,7 @@ module.exports = {
    options: {
     precachePages: [`/work/*`, `/subscribe`, '/work/'],
       workboxConfig: {
-         globPatterns: ['**src/images/*']
+         globPatterns: ['*.html', 'src/**/*.png'] 
       }
    }
 },
