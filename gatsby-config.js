@@ -35,21 +35,15 @@ module.exports = {
         name: `MISHEAN`,
         short_name: `MISH`,
         start_url: `/`,
+        description: `MISHEAN PEIRIS PORTFOLIO.`,
+        lang: `en`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/images/favicon.png`,
-        cache_busting_mode: 'none'
+        cache_busting_mode: `none`,
       }
     },
-    {
-   resolve: 'gatsby-plugin-offline',
-   options: {
-    precachePages: [`/work/*`, `/subscribe`, '/work', '/'],
-      workboxConfig: {
-         globPatterns: ['*.html', '**/icon-path*'] 
-      }
-   }
-},
+    `gatsby-plugin-remove-serviceworker`, 
     `gatsby-plugin-netlify`]
 }
