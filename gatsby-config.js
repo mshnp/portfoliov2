@@ -39,17 +39,17 @@ module.exports = {
         theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/images/favicon.png`,
-        cache_busting_mode: 'none',
-      },
+        cache_busting_mode: 'none'
+      }
     },
     {
    resolve: 'gatsby-plugin-offline',
    options: {
-    precachePages: [`/work/*`, `/subscribe`, '/work'],
+    precachePages: [`/work/*`, `/subscribe`, '/work/'],
       workboxConfig: {
-         globPatterns: ['src/images/favicon.png']
-      },
-   },
+         globPatterns: ['**src/images/*']
+      }
+   }
 },
     `gatsby-plugin-netlify`]
 }
