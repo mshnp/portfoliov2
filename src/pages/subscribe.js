@@ -15,7 +15,7 @@ const Subscribe = () => {
         </section> 
         <section>
           <p className='max-w-4xl text-center px-5'>
-            Subscribe for a weekly mailing list consisting of: found images, new sites, opnion pieces, reviews, playsits... ( basically whatever im interested in at the time)
+            Subscribe for a weekly mailing list consisting of: images, new sites, opnion pieces, playlists...
           </p>
         </section>
       </main>
