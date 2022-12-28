@@ -45,5 +45,23 @@ module.exports = {
       }
     },
     `gatsby-plugin-remove-serviceworker`, 
-    `gatsby-plugin-netlify`]
+    `gatsby-plugin-netlify`,
+  {
+     resolve: `gatsby-plugin-google-gtag`,
+     options: {
+       // You can add multiple tracking ids and a pageview event will be fired for all of them.
+       trackingIds: [
+         process.env.GOOGLE_ID, // Google Analytics / GA
+       ],
+       // This object is used for configuration specific to this plugin
+       pluginConfig: {
+         // Puts tracking script in the head instead of the body
+         head: true,
+         // Setting this parameter is also optional
+         respectDNT: true,
+         // Avoids sending pageview hits from custom paths
+         exclude: ["/preview/**", "/do-not-track/me/too/"],
+       },
+     },
+   },]
 }
