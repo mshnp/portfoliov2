@@ -17,7 +17,7 @@ const Header = () => {
     <div className='flex text-2xl items-center justify-between h-16 relative max-w-6xl lg:mx-auto'>
     {/* left */}
     <Link to='/' className='ml-5 hover:underline select-none font-semibold w-36' onClick={handleClose}> 
-        Mishean
+        MSHN
     </Link>
 
     <Link to='/work' className='hover:underline font-semibold hidden md:flex justify-center'> 

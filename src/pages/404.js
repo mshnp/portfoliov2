@@ -21,7 +21,7 @@ const NotFoundPage = () => {
 }
 
 export const Head = () => (
-  <SEO title="MISHEAN | 404"/>
+  <SEO title="MSHN | 404"/>
 )
 
 

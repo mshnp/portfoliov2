@@ -49,7 +49,7 @@ export default WorkTemplate
 export const Head = ({data}) => {
   const {projectTitle} = data.contentfulWork;
 return (
-  <SEO title={`MISHEAN | ${projectTitle}`}/>
+  <SEO title={`MSHN | ${projectTitle}`}/>
 )
 }
 

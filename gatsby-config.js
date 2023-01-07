@@ -4,10 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: 'MISHEAN',
-    description: 'misheans portfolio',
-    author: 'Mishean Peiris', 
-    siteUrl: `https://www.mishean.com`,
+    title: 'MSHN',
+    description: 'mshn portfolio',
+    author: 'MSHN', 
+    siteUrl: `https://www.mshnp.com`,
   },
   plugins: [`gatsby-plugin-styled-components`, 'gatsby-plugin-postcss', `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -32,10 +32,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `MISHEAN`,
-        short_name: `MISH`,
+        name: `MSHN`,
+        short_name: `MSHN`,
         start_url: `/`,
-        description: `MISHEAN PEIRIS PORTFOLIO.`,
+        description: `MSHN PORTFOLIO.`,
         lang: `en`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,

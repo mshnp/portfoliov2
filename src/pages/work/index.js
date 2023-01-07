@@ -51,7 +51,7 @@ const Work = ({data: {allContentfulWork: {nodes}}}) => {
 }
 
 export const Head = () => (
-  <SEO title="MISHEAN | WORK"/>
+  <SEO title="MSHN | WORK"/>
 )
 
 

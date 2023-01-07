@@ -11,7 +11,7 @@ const Footer = () => {
         <div className='flex flex-row w-[100px] items-center justify-between mb-1'>
         <a href='https://github.com/mishean' target="_blank"><FaGithub className='text-[20px]'/></a>
         <a href='https://www.are.na/00015-p' target='_blank' className='text-[20px]'>✶✶</a>
-        <a href='mailto:misheanpeiris@gmail.com'><EnvelopeIcon className='h-[20px]'/></a>
+        <a href='mailto:m23006965@proton.me'><EnvelopeIcon className='h-[20px]'/></a>
         </div>
         <div className='flex flex-row text-sm w-[300px] items-center justify-center'> 
           <p>

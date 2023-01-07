@@ -27,7 +27,7 @@ const Subscribe = () => {
 
 
 export const Head = () => (
-  <SEO title="MISHEAN | SUBSCRIBE"/>
+  <SEO title="MSHN | SUBSCRIBE"/>
 )
 
 
