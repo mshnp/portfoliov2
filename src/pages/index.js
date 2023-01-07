@@ -23,7 +23,7 @@ const IndexPage = ({data}) => {
     
       <Layout>
         <section className='flex flex-col items-center'>
-        <StaticImage className="mb-2" src="../images/mish.jpg" alt="mishean peiris" placeholder="blurred" layout ='constrained' width={400}
+        <StaticImage className="mb-2" src="../images/mish.jpg" alt="mshn" placeholder="blurred" layout ='constrained' width={400}
       />
         <h2 className="pt-5"> 
           Current Stack
